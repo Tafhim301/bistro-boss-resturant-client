@@ -15,15 +15,17 @@ const Home = () => {
             <Helmet>
                 <title>Bistro Boss | Home</title>
             </Helmet>
-            <Banner></Banner>
-            <Category></Category>
-            <Cover img={coverImg} title={'Bostro Boss'}></Cover>
-            <PopularMenu></PopularMenu>
-            <Contact></Contact>
-            <Featured></Featured>
-            <Testimonials></Testimonials>
+                <Banner></Banner>
+            <div className="mx-20">
+                <Category></Category>
+                <Cover img={coverImg} title={'Bostro Boss'}></Cover>
+                <PopularMenu></PopularMenu>
+                <Contact></Contact>
+                <Featured></Featured>
+                <Testimonials></Testimonials>
+            </div>
 
-            
+
         </div>
     );
 };

@@ -14,13 +14,13 @@ import { Rating } from "@smastrom/react-rating";
 const Testimonials = () => {
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch('reviews.json')
+        fetch('http://localhost:5000/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
 
     }, [])
     return (
-        <section className='mb-20 mx-20'>
+        <section className='mb-20 '>
             <SectionTitle subHeading={'What Our Clients Say'} heading={"Testimonials"}></SectionTitle>
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                 {

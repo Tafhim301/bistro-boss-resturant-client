@@ -3,13 +3,17 @@ import orderCover from '../../../assets/shop/banner2.jpg'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { useState } from "react";
 import useMenu from "../../../Hooks/useMenu";
-import FoodCart from "../../../Components/FoodCart/FoodCart";
 import 'react-tabs/style/react-tabs.css';
 import OrderTab from "../OrderTab/OrderTab";
+import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 
 const Order = () => {
-    const [tabIndex, setTabIndex] = useState(0);
+    const categories = ["salad","pizza","soup","dessert",'drinks']
+    const {category} = useParams();
+    const initialIndex = categories.indexOf(category)
+    const [tabIndex, setTabIndex] = useState(initialIndex);
     const [menu] = useMenu();
     const dessert = menu.filter(item => item.category === 'dessert')
     const soup = menu.filter(item => item.category === 'soup')
@@ -17,9 +21,13 @@ const Order = () => {
     const pizza = menu.filter(item => item.category === 'pizza')
     const salad = menu.filter(item => item.category === 'salad')
     return (
-        <div className="mx-20  ">
+        <div className="  ">
+             <Helmet>
+                <title>Bistro Boss | Order Food</title>
+            </Helmet>
+
             <Cover img={orderCover} title={'Order Food'}></Cover>
-            <Tabs className={'my-10'} selectedTabClassName=" text-yellow-600 py-1 border-yellow-600 border-b-2" defaultIndex={tabIndex} onSelect={(index) => console.log(index)}>
+            <Tabs className={'my-10 mx-20'} selectedTabClassName=" text-yellow-600 py-1 border-yellow-600 border-b-2" defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                 <TabList className={'text-center my-5'}>
                     <Tab className={"font-semibold uppercase hover:cursor-pointer outline-none inline mr-3"}>Salad</Tab>
                     <Tab className={"font-semibold uppercase hover:cursor-pointer outline-none inline mr-3"}>Pizza</Tab>

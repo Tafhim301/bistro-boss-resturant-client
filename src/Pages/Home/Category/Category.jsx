@@ -11,7 +11,7 @@ import slide5 from '../../../assets/home/slide5.jpg'
 import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
 const Category = () => {
     return (
-        <section className='mx-20'>
+        <section className=''>
             <SectionTitle heading={"ORDER ONLINE"} subHeading={"From 11:00am to 10:00pm"}>
 
             </SectionTitle>

@@ -7,7 +7,7 @@ const Featured = () => {
     return (
 
     
-        <div className="Featured-item bg-fixed mx-20 text-white">
+        <div className="Featured-item bg-fixed  text-white">
          <section className='mb-20  bg-black bg-opacity-60'>
               <SectionTitle subHeading={'Check it Out'} heading={"From Our Menu"}></SectionTitle>
               <div className="md:flex justify-center items-center  pb-20 pt-10 px-36 ">

@@ -6,7 +6,7 @@ import MenuItem from "../../Shared/MenuItem/MenuItem";
 const MenuCategory = ({ items, title, coverImg }) => {
 
     return (
-        <div className="mx-20 pt-8 my-10">
+        <div className=" pt-8 my-10">
             {
                 title && <Cover img={coverImg} title={title}></Cover>
             }
@@ -16,7 +16,7 @@ const MenuCategory = ({ items, title, coverImg }) => {
                 }
             </div>
             <div className="text-center">
-                <Link>
+                <Link to={`/order/${title}`}>
                     <button className="btn border-0 border-b-2 btn-outline">Order Now</button>
                 </Link>
             </div>

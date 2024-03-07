@@ -10,7 +10,7 @@ const PopularMenu = () => {
     const popular = menu.filter(item => item.category === 'popular');
    
     return (
-        <section className='mb-20 mx-20 '>
+        <section className='mb-20  '>
             <SectionTitle subHeading={'Check it Out'} heading={"From Our Menu"}></SectionTitle>
             <div className="grid md:grid-cols-2 gap-10">
                 {
