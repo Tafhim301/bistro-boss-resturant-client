@@ -31,23 +31,23 @@ const Category = () => {
             >
                 <SwiperSlide >
                     <img src={slide1} className='' alt="" />
-                    <h3 className=' text-center -ml-20 text-3xl font-bold italic  -mt-16 text-white '>Salads</h3>
+                    <h3 className=' text-center -ml-20 text-3xl font-bold italic py-5 -mt-24 text-white '>Salads</h3>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src={slide2} alt="" />
-                    <h3 className=' text-center -ml-20 text-3xl font-bold italic  -mt-16 text-white '>Pizzas</h3>
+                    <h3 className=' text-center -ml-20 text-3xl font-bold italic py-5 -mt-24 text-white '>Pizzas</h3>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src={slide3} alt="" />
-                    <h3 className=' text-center -ml-20 text-3xl font-bold italic  -mt-16 text-white '>Soups</h3>
+                    <h3 className=' text-center -ml-20 text-3xl font-bold italic py-5  -mt-24 text-white '>Soups</h3>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src={slide4} alt="" />
-                    <h3 className=' text-center -ml-20 text-3xl font-bold italic  -mt-16 text-white '>Desert</h3>
+                    <h3 className=' text-center -ml-20 text-3xl font-bold italic py-5  -mt-24 text-white '>Desert</h3>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src={slide5} alt="" />
-                    <h3 className=' text-center -ml-20 text-3xl font-bold italic  -mt-16 text-white '>Salads</h3>
+                    <h3 className=' text-center -ml-20 text-3xl font-bold italic py-5 -mt-24 text-white '>Salads</h3>
                 </SwiperSlide>
 
             </Swiper>
