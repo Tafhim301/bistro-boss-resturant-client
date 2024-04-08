@@ -1,11 +1,13 @@
 import { FaAd, FaHome, FaSearch, FaShoppingCart } from "react-icons/fa";
-import { FaBook, FaCalendar, FaEnvelope, FaList, FaUser, FaUtensils, } from "react-icons/fa6";
+import { FaBook, FaCalendar, FaEnvelope, FaList, FaMoneyCheckDollar, FaUser, FaUtensils, } from "react-icons/fa6";
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../Hooks/useAdmin";
+import useCart from "../Hooks/useCart";
 
 
 const Dashboard = () => {
     const [isAdmin] = useAdmin();
+    const [cart] = useCart();
     return (
         <div className="flex">
             <div className="w-64 min-h-screen bg-orange-400">
@@ -37,13 +39,16 @@ const Dashboard = () => {
                                     <NavLink to={'/dashboard/reservation'}><FaCalendar />Reservation</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to={'/dashboard/cart'}><FaShoppingCart></FaShoppingCart>My Cart</NavLink>
+                                    <NavLink to={'/dashboard/cart'}><FaShoppingCart></FaShoppingCart>My Cart ({cart.length})</NavLink>
                                 </li>
                                 <li>
                                     <NavLink to={'/dashboard/review'}><FaAd />Review</NavLink>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <NavLink to={'/dashboard/bookings'}><FaList />My Bookings</NavLink>
+                                </li> */}
+                                <li>
+                                    <NavLink to={'/dashboard/paymentHistory'}><FaMoneyCheckDollar />Payment History</NavLink>
                                 </li>
                             </>
                     }
