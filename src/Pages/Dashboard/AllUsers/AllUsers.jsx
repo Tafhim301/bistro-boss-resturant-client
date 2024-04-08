@@ -42,7 +42,7 @@ const AllUsers = () => {
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
-            axiosSecure.delete(`users/${id}`)
+            axiosSecure.delete(`/users/${id}`)
             .then(res => {
                 console.log(res.data);
                 if(res.data.deletedCount > 0){

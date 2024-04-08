@@ -4,6 +4,7 @@ import useCart from "../../../Hooks/useCart";
 
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import { Link } from "react-router-dom";
 
 
 const Cart = () => {
@@ -46,7 +47,7 @@ const Cart = () => {
             <div className="flex justify-around mb-5">
                 <h2 className="text-4xl">Items:{cart.length} </h2>
                 <h2 className="text-4xl">Total Price:{totalPrice} </h2>
-                <button className="btn bg-orange-400">Pay</button>
+               {cart.length?<Link  to={'/dashboard/payment'}> <button className="btn bg-orange-400">Pay</button></Link>:<button disabled className="btn bg-orange-400">Pay</button>}
             </div>
             <div className="overflow-x-auto">
                 <table className="table">
