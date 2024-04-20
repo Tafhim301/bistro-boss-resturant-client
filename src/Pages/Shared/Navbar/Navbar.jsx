@@ -3,15 +3,20 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import { FaCartShopping } from "react-icons/fa6";
 import useCart from "../../../Hooks/useCart";
+import useAdmin from "../../../Hooks/useAdmin";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
     const [cart] = useCart();
+    const [isAdmin] = useAdmin();
     const navOptions =
         <div className="flex justify-center items-center">
             <li><NavLink to={'/'}>Home</NavLink></li>
             <li><NavLink to={'/menu'}>Our Menu</NavLink></li>
             <li><NavLink to={'/order/salad'}>Order Foods </NavLink></li>
+            {
+                user ? isAdmin ?<li><NavLink to={'/dashboard/adminHome'}>Dashboard</NavLink></li>:<li><NavLink to={'/dashboard/userHome'}>Dashboard </NavLink></li>: ''
+            }
             <li><Link to={'dashboard/cart'}><button className="btn">
             <FaCartShopping className="" />
                 <div className="badge badge-secondary">+{cart.length}</div>
